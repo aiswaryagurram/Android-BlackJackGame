@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/purple_700">
+    <TextView
+        android:id="@+id/betTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="22dp"
+        android:textColor="@android:color/white"
+        />
+    <TextView
+        android:id="@+id/cashTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:text="Bet Total:$0"
+        android:layout_above="@+id/one"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/one"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/chip_one"
+            android:onClick="plusOne"
+            android:layout_alignTop="@+id/five"
+            android:layout_toLeftOf="@+id/five"
+            android:layout_toStartOf="@+id/five" />
+        <ImageButton
+            android:id="@+id/five"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/chip_five"
+            android:onClick="plusFive"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <ImageButton
+            android:id="@+id/twenty_five"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/chip_twenty_five"
+            android:onClick="plusTwentyFive"
+            android:layout_alignTop="@+id/five"
+            android:layout_toRightOf="@+id/five"
+            android:layout_toEndOf="@+id/five" />
+
+
+        <ImageButton
+            android:id="@+id/fifty"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/chip_fifty"
+            android:onClick="plusFifty"
+            android:layout_below="@+id/one"
+            android:layout_alignTop="@+id/twenty_five"
+            android:layout_toRightOf="@+id/twenty_five"
+            android:layout_toEndOf="@+id/twenty_five"/>
+        <ImageButton
+            android:id="@+id/hundred"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/chip_hundred"
+            android:onClick="plusHundred"
+            android:layout_below="@+id/five"
+            android:layout_alignTop="@+id/fifty"
+            android:layout_toRightOf="@+id/fifty"
+            android:layout_toEndOf="@+id/fifty"/>
+
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/clear"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:onClick="clearBet"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Clear"
+        android:visibility="gone"
+        android:layout_below="@+id/deal"
+        android:layout_alignLeft="@+id/deal"
+        android:layout_alignStart="@+id/deal" />
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:text="Select Number of Decks"
+        android:layout_below="@+id/fifty"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/caption"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/deal"
+        android:layout_gravity="center"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:text="Deal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/spinner"
+        android:layout_centerHorizontal="true" />
+
+</LinearLayout>

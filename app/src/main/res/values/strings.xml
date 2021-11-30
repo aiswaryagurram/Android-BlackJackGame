@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BLACKJACK_GAME</string>
+    <string name="title_activity_game"> Blackjack</string>
+    <string name="deal_button_label">Deal</string>
+    <string name="hit_button_label">Hit</string>
+    <string name="double_button_label">Double</string>
+    <string name="stand_button_label">Stand</string>
+    <string name="deck_label">Deck:</string>
+    <string name="title_activity_splash"> Blackjack</string>
+</resources>

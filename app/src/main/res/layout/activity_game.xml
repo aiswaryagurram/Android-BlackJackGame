@@ -1,0 +1,438 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    >
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="10dp" >
+
+        <Button
+            android:id="@+id/deal_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/deal_button_label" />
+
+        <Button
+            android:id="@+id/hit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="@string/hit_button_label" />
+
+        <Button
+            android:id="@+id/double_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="@string/double_button_label" />
+
+        <Button
+            android:id="@+id/stand_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="@string/stand_button_label" />
+
+        <Button
+            android:id="@+id/btnSurrender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="Surrender"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/deck_label" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+
+
+        <TextView
+            android:id="@+id/bet_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:text="Bet" />
+
+        <TextView
+            android:id="@+id/balance_text"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/player_1_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/player_1_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dealer"
+            android:textColor="@color/text_color"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/player_2_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/player_2_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="120dp"
+        android:layout_marginLeft="5dp"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="@color/text_color" />
+
+
+    <ImageView
+        android:id="@+id/player1card1"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player1card2"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player1card3"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player1card4"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player1card5"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player1card6"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player1card7"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player1card8"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player1card9"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="141dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player1card10"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="1200dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card1"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card2"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card3"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card4"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card5"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card6"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card7"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card8"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card9"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/player2card10"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="1200dp"
+        android:layout_marginTop="200dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:scaleType="fitXY"
+        android:contentDescription="TODO" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:id="@+id/available_cards_text"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="/" />
+
+        <TextView
+            android:id="@+id/total_cards_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
